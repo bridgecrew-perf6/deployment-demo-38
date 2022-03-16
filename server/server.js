@@ -12,6 +12,10 @@ app.use(express.static(path.join(__dirname, "../public")))
 //therefore, simply change "/styles" in index.html to "/index.css" and it can now read it all
 // app.use("/styles", express.static(path.join(__dirname, "../public/index.css")))
 
+//this allows heroku to find /images through the link in index.html(accessed above)
+app.use("/images", express.static(path.join(__dirname, "../images")))
+//can also write above line as an enpoint and it should work
+
 
 // // Endpoints:
 // // app.get("/", function(req, res) {
