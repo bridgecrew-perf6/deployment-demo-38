@@ -8,6 +8,9 @@ app.use(express.json())
 
 // Middleware
 app.use(express.static(path.join(__dirname, "../public")))
+//line below is not needed necessarily since above line allows middleware to access all public file
+//therefore, simply change "/styles" in index.html to "/index.css" and it can now read it all
+// app.use("/styles", express.static(path.join(__dirname, "../public/index.css")))
 
 
 // // Endpoints:
